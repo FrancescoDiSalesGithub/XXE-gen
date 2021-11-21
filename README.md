@@ -12,6 +12,10 @@ where:
 the possible operations are injection and dos in which:
 * injection -> does a xxe 
 * dos -> implements a dos xxe
+* base64 ->  does a base64 xxe
+* phpwrap -> inserts in the entity a php filter
+* xinclude -> does a xinclude attack
+* soap -> does a soap xxe
 
 some examples about how to run it:
   ```
